@@ -1,0 +1,13 @@
+body{
+    background-image: url(tec.jpg), url(map.jpg); 
+    /*Adicionando background, plano de fundo do body, 
+    com uma virgula pode-se adicionar mais de uma imagem  */
+    background-size: 1280px;/* 720px controla o tamanho da imagem.*/
+    background-repeat: no-repeat; /*Controla a repetição da imagem na tela*/
+    background-position: 50px 100px; /*Controlando a posição do plano de fundo*/
+}
+
+p{
+    background-image: url(map.jpg);
+
+}

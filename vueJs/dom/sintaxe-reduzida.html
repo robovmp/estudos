@@ -1,0 +1,32 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" ></script>
+
+<!-- 
+    v-on = @
+    v-bind = :
+
+-->
+
+
+<div id="app">
+    <p> {{ contador }} </p>
+    <button v-on:click="somar">Somar</button> <hr>
+    <input type="text" v-bind:value="contador">
+</div>
+
+<script>
+
+    new Vue({
+        el:'#app',
+        data: {
+            contador: 0
+        },
+        methods: {
+            somar(){
+                this.contador = this.contador + 1;
+
+            }
+        }
+
+    })
+
+</script>

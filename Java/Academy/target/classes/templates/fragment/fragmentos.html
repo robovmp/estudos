@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Academy</title>
+</head>
+<body>
+    <header th:fragment="cabeca">
+        <div class="header">
+            <div class="logo">
+                <a href="/index" class="logo-img"><img src="../img/logo.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <nav class="menu-content">
+                    <ul>
+                        <li><a href="/index">Inicio</a></li>
+                        <li><a th:href="@{inserirAlunos}">Cadastrar Aluno</a></li>
+                        <li><a th:href="@{filtro-alunos}">Pesquisar Aluno</a></li>
+                        <li>
+                        	<form action="/logout" method="post" class="button-sair" >
+                        		<button  type="submit">Sair</button>
+                        	</form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <footer th:fragment="footer">
+        <div class="footer">
+            <span>Todos os direitos reservados - 2021 &copy; Vinícius Martins</span>
+        </div>
+    </footer>
+    
+</body>
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/academy.js"></script>
+</html>

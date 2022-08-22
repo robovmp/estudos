@@ -1,0 +1,27 @@
+body{
+    background: rgb(121, 121, 199);
+    margin: 0px;
+}
+
+div{
+    background: white;
+    border-radius: 25px;
+    border: rgb(77, 71, 71) solid ;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 500px;
+    text-align: center;
+    font: 20pt Roboto;
+}
+/* Padding "margem interna" referente ao conteúdo*/
+#d1{
+    padding: 100px;
+}
+
+#d2{
+    padding: 50px;
+}
+
+#d3{
+    padding: 25px;
+}

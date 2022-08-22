@@ -1,0 +1,9 @@
+body{
+    background-image: url(cosmos.png)/*  , url(exemplo.png)  */;
+    background-repeat: no-repeat/*  , repeat  */; 
+    /*"no-repeat" para nã repetir o plano de fundo*/
+    background-attachment: scroll; 
+    /*Na rolagem ele configura para ficar fixo "fixed" */ 
+    /*"scroll" é o valor padrão de rolagem*/
+    background-size: auto; /*configura o tamanho do plano de fundo */
+}   

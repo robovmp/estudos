@@ -1,0 +1,27 @@
+div{
+    height: 200px;
+    width: 200px;
+    border: black solid 1px;
+    border-radius: 20%;
+    padding: 20px;  
+   /* transform: translate(200px, 0px); translata em  X e Y*/
+   /*transform: rotate(45deg); faz o movimento de rotação*/
+   /*transform: scale(2); aumenta a escala */
+   /*transform: skewX(20deg); ele inclina o "objeto"* no eixo X*/
+   /*transform: skewY(20deg); ele inclina no eixo Y*/
+   /*transform: matrix(2, 0, 0, 2, 0, 0);*/
+   transform-origin: 100% 100%; /*define a origem onde a figura começa para transformaçãp*/
+
+}
+/*
+
+o que junta todas as transformações é o comando:
+
+transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY;
+Sendo essa a ordem a ser empregado os fatores
+
+Devem ser adicionados outros parametros ao mesmo "transform" caso seja necessário
+
+
+Todas essas transformações podem ser aplicadas a outros elementos
+*/

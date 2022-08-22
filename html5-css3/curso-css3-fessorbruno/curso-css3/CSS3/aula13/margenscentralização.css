@@ -1,0 +1,32 @@
+body{
+    background: rgb(117, 117, 207);
+    margin: 0px;
+}
+
+div{
+    font: 12pt Arial;
+    background: white;
+    border: black solid 1px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+
+    /*
+    margin: 0px 0px 0px 0px;
+
+            superior - direita - inferior - esquerda*/
+    
+}
+
+#d1{
+    margin: auto;
+}
+
+#d2{
+    margin: auto;
+}
+p{
+    text-align: center; /*alinhar o texto */
+    margin: auto;
+}

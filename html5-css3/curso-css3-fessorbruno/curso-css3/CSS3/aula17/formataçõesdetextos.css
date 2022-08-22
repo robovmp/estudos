@@ -1,0 +1,36 @@
+p{
+    font: 12pt arial;
+    color: black;/*essa propriedade configura a cor do texto*/
+    text-align: justify;/*essa propriedade configura o alinhamento do texto*/
+    text-decoration: none;/*usado para formatar as linhas que textos recebem*/
+    text-transform: none;/*formatação de letras em caixa alta e correlações*/
+    text-indent: 100px;/*inserindo parágrafos*/
+    letter-spacing: normal;/*configura o espaçamento das letras*/
+    line-height: normal;/*espaçamento entre as linhas */
+    direction: ltr;/*configura a direção do texto*/
+    word-spacing: normal;/*espaçamento das palavras*/
+    text-align-last: auto;/*configura o alinhamento da última linha do parágrafo*/
+}
+
+.p1{   
+
+}
+
+.p2{
+
+}
+
+.p3{
+
+}
+
+div{  
+    width: 400px;  
+    height: 200px;
+    border-radius: 20px;
+    border: solid 1px black;
+    padding: 5px;
+    white-space: normal;/*controla a quebra de linha*/
+    overflow: auto;/*controla o conteúdo que transcende suas margens*/
+    word-break: break-all;/*quebra as palavras onde for necessário*/
+}

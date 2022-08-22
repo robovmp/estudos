@@ -1,0 +1,23 @@
+body{
+    background-color: cadetblue;
+}
+
+
+
+#d1, #d2, #d3 {
+    border: 10px dotted black;
+    padding: 100px; /*delimita o espaço dentre os quatros lados, esquerda, direita, topo e baixo*/
+    background-image: url(can.png);
+}
+
+#d1{
+    background-clip: border-box;
+}/* configura a margem do plano de fundo pela borda, essa formatação deixa ela total preenchida*/
+
+#d2{
+    background-clip: padding-box;
+}/*Essa formatação, deixa o background com inicio rente a borda*/
+
+#d3{
+    background-clip: content-box;
+}/*Essa aplica o plano de fundo somente no conteúdo*/

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-radius Previewer</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+    <Section>
+
+        <div class="container">
+
+            <div class="preview">
+                <div id="area" class="area">
+                </div>
+            </div>
+            <div class="area-def">
+                <div class="def">
+                    <input oninput="setBorder(event)" id="supEsq" type="range" >
+                    <input class="input-value" id="labelSupEsq" readonly >
+                    <input oninput="setBorder(event)" id="supDir" type="range" >
+                    <input class="input-value" id="labelSupDir" readonly >
+                    <input oninput="setBorder(event)" id="infDir" type="range" >
+                    <input class="input-value" id="labelInfDir" readonly >
+                    <input oninput="setBorder(event)" id="infEsq" type="range" >
+                    <input class="input-value" id="labelInfEsq" readonly >
+                </div>
+
+            </div>
+            
+
+        </div>
+
+
+    </Section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

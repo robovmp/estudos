@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Academy</title>
+</head>
+<body>
+
+    <div th:replace="fragment/fragmentos :: cabeca"></div>
+    <section class="section-banner">
+        <div class="banner">
+            <div class="menu-banner">
+                <div class="menu-banner--text">Sistema de Gerenciamento de Aluno</div>
+                <div class="btn">
+                    <a th:href="@{inserirAlunos}" class="btn-1">
+                        Cadastrar Aluno
+                    </a>
+                    <a th:href="@{alunos-adicionados}" class="btn-2">
+                        Encontrar aluno
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div th:replace="fragment/fragmentos :: footer"></div>
+
+</body>
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/academy.js"></script>
+</html>

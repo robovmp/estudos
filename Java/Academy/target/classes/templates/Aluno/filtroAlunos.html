@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Pesquisar Alunos</title>
+</head>
+<body>
+	<div th:replace="fragment/fragmentos :: cabeca"></div>
+	<section class="section-form">
+		<div class="container">
+			<div class="div-tit">Encontre Alunos</div>
+			<form method="post" class="filtro-form" action="pesquisar-aluno" th:object="${aluno}">
+				<div class="filtro">
+					<input  th:field="*{nome}" placeholder="Busque por um aluno">
+					<button type="submit" class="">Pesquisar</button>
+				</div>
+			</form>
+			<div class="slide">
+				<div class="slide-card">
+					<div class="card">
+						<h5>Alunos Ativos</h5>
+						<p>Busque por todos os alunos que estão ativos no sistema.</p>
+						<a th:href="@{/alunos-ativos}">Clique aqui</a>
+					</div>
+				</div>
+				
+				<div class="slide-card">
+					<div class="card">
+						<h5>Alunos Inativos</h5>
+						<p>Busque por todos os alunos que estão inativos no sistema.</p>
+						<a th:href="@{/alunos-inativos}">Clique aqui</a>
+					</div>
+				</div>
+				
+				<div class="slide-card">
+					<div class="card">
+						<h5>Alunos Trancados</h5>
+						<p>Busque por todos os alunos que estão trancados no sistema.</p>
+						<a th:href="@{/alunos-trancados}">Clique aqui</a>
+					</div>
+				</div>
+				
+				<div class="slide-card">
+					<div class="card">
+						<h5>Alunos Cancelados</h5>
+						<p>Busque por todos os alunos que estão cancelados no sistema.</p>
+						<a th:href="@{/alunos-cancelados}">Clique aqui</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

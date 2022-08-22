@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Roboto;
+    src: url();
+} /*essa propriedade envia junto com seus arquivos a fonte que esta usando, caso o hospede não tenha a fonte instalada*/
+/*google fonts*/
+
+
+p{
+    font-family:'Odibee Sans', cursive;
+    /*Formata o tipo de fonte, essa propriedade funciona como grupo, utilizando sequências para seguir*/
+    font-style: oblique; /*configuração do italico*/
+    font-weight: bold; /*Configura o negrito*/
+    font-size: 20pt; /*Configura o tamanho da fonte*/
+    font-variant: small-caps; /*Deixa asletras maiusculas, e as primeiras letras continuam em destaque*/
+}

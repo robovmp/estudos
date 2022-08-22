@@ -1,0 +1,59 @@
+body{
+    background: rgb(145, 145, 201);
+}
+
+#d1{
+    background: white;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(94, 88, 88);
+    border-radius: 25px;
+    background: repeating-linear-gradient(45deg, black 0%, white 20%);
+    /* via código podemos trabalhar com dois tipos de gradient: lienar e radial
+        o linear sempre varia de um ponto a outro em linha de variação 
+        " background: linear-gradient(to right, black, white, red, blue);"
+
+
+    a primeira proprieddade define a direção do gradient (direita, baixo, esquerda, topo)
+    variação em angulo exe: 45deg
+    é possível ir adicionando mais cores
+    " background: linear-gradient(45deg, black, white, red, blue);"
+
+    defindo a porcentagem de ocupação de cada cor, onde se dá inicio de cada cor 
+    "background: linear-gradient(45deg, black 0%, white 25%, green 100%);"
+    */
+}
+/*Caso o gradient não feche em 100%, o que não é um problema, mas queira se repetir, podemos usar:
+" background: repeating-linear-gradient(45deg, black 0%, white 20%);"
+" background: repeating-radial-gradient(circle, black 0%, white 20%);"
+funcionado para os dois tipos
+*/
+
+#d2{
+    background: white;
+    width: 150px;
+    height: 300px;
+    border: 2px solid rgb(94, 88, 88);
+    border-radius: 25px;
+    background: repeating-radial-gradient(circle, black 0%, white 20%);
+
+    /*
+    Caso a forma onde está sendo aplicada não seja simétrica, exe: W:150px H: 300px,
+    podemos forçar o formato editando  os paramêtros:
+    "background: radial-gradient(circle, black 0%, white 50%);"
+    
+    */
+}
+
+#d3{
+    background: white;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(94, 88, 88);
+    border-radius: 25px;
+
+}
+
+h1{
+    
+}

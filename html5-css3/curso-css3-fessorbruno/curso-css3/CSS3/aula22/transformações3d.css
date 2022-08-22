@@ -1,0 +1,10 @@
+div{
+    width: 200px;
+    height: 200px;
+    border: black solid 1px;
+}
+/*
+Os mesmo comandos aplicados na 2D se aplicam aqui
+Contudo, com um eixo a mais, sendo ele o Z, de profundidade
+
+*/

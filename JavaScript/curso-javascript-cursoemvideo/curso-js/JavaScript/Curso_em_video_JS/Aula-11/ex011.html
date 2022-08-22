@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body{
+            font:normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questionário Nacionalidade</h1>
+    Qual país você vive? <input type="text" name="N" id="N">
+    <input type="button" value="Verifique" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        
+        function verificar(){
+
+            var txtN = window.document.querySelector('input#N')
+            var res = window.document.querySelector('div#res')
+            var nac = txtN.value
+
+            if (nac == 'Brasil'){
+                res.innerHTML = 'Você é Brasileiro!'
+
+            } else {
+                res.innerHTML = 'Você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>

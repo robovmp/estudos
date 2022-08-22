@@ -1,0 +1,23 @@
+p {
+    color: #f00;
+    font-size: 20pt;
+    
+}
+#p1{
+    background-color: black;
+}
+
+.txt{
+    color: chocolate;
+    background-color: darkgreen;
+    font:normal;
+}
+
+h4, h5, h6 {
+    font-size: 15pt;
+    background-color: darkkhaki;
+    font-weight: lighter;
+}
+h1, h2, h3{
+    font-weight: lighter;
+}

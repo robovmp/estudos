@@ -1,0 +1,11 @@
+p{
+    width: 400px;
+  border: 30px solid;
+  border-image: url(cores.png) 30 stretch;
+}
+
+/* Podemos entender "round" como um loop 
+    o "30" define o fatiamento 
+    "stretch" ao invés de repetir ele vai esticar 
+
+*/

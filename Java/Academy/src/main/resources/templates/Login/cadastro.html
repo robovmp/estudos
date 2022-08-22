@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Academy - Cadastro</title>
+</head>
+<body>
+	<section class="section-login--form">
+		<div class="container">
+			<div class="login-form">
+				<div class="login-titulo">
+					<h2>Criar Conta</h2>
+					<p>Crie sua conta no sistema.</p>
+				</div>
+				<form method="post" th:object="${usuario}" action="salvarUsuario">
+					<div class="login-area">
+						<input type="email" th:field="*{email}" placeholder="exemplo@gmail.com">
+					</div>
+					<div class="login-area">
+						<input type="text" th:field="*{user}" placeholder="username">
+					</div>
+					
+					<div class="login-area">
+						<input type="password" th:field="*{senha}" placeholder="****">
+					</div>
+					
+					<div class="login-btn">
+						<a class="login-btn" th:href="@{/}">Voltar</a>
+						<button class="login-btn" id="login" type="submit">Criar Conta</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

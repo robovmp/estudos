@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Alterar Alunos</title>
+</head>
+<body>
+	<div th:replace="fragment/fragmentos :: cabeca"></div>
+	<section class="">
+		<div class="container">
+			<div class="div-tit">Alterar Alunos</div>
+			<form method="post" action="/alterar" th:object="${aluno}">
+			<input type="hidden" th:field="*{id}">
+				<div class="form-area">
+					<label>Nome do Auno:</label>
+					<label>
+						<input class="caixas" type="text" placeholder="Ex: João Silva" th:field="*{nome}"/>
+					</label>
+				</div>
+				
+				<!-- Curso -->
+				<div class="form-area">
+					<label>Selecione o Curso:</label>
+					<label>
+						<select class="caixas" th:field="*{curso}">
+							<option th:each="curso : ${T(br.com.academy.enums.Curso).values()}"
+							th:value="${curso}" th:text="${curso}"></option>
+						</select>
+					</label>
+				</div>
+				
+				<!-- Matricula -->
+				
+				<div class="form-area">
+					<label>Gerar Matricula:</label>
+					<label>
+						<input readonly="readonly" class="caixas" type="text" th:field="*{matricula}"/>
+					</label>
+					<label>
+						<button class="btn-form" type="button" onclick="GerarMatricula();">Gerar</button>
+					</label>
+				</div>
+				
+				<!-- Status -->
+				
+				<div class="form-area">
+					<label>Selecione o Status:</label>
+					<label>
+						<select class="caixas" th:field="*{status}">
+							<option th:each="status : ${T(br.com.academy.enums.Status).values()}"
+							th:value="${status}" th:text="${status}"></option>
+						</select>
+					</label>
+				</div>
+				
+				<!-- Turno -->
+				
+				<div class="form-area">
+					<label>Turno:</label>
+					<label>
+						<input class="caixas" type="text" placeholder="Ex: Manhã" th:field="*{turno}"/>
+					</label>
+				</div>
+				
+				
+				<div class="form-area-btn">
+					<button type="submit" class="btn-form">Salvar</button>
+					<button class="btn-form"><a href="">Voltar</a></button>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+</body>
+
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/academy.js"></script>
+</html>

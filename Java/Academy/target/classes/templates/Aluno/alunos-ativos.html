@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Listagem de Alunos</title>
+</head>
+<body>
+	<div th:replace="fragment/fragmentos :: cabeca"></div>
+	<section class="section-list">
+		<div class="container-list">
+		<div class="div-tit">Alunos Ativos</div>
+			<table class="table-list">
+				<thead>
+					<tr>
+						<th scope="col">Nome</th>
+						<th scope="col">Curso</th>
+						<th scope="col">Matricula</th>
+						<th scope="col">Status</th>
+						<th scope="col">Turno</th>
+						<th scope="col">Ação</th>
+					</tr>
+					
+				</thead>
+				<tbody>
+					<tr scope="row" th:each="alunos : ${alunosAtivos}">
+						<td th:text="${alunos.nome}"></td>
+						<td th:text="${alunos.curso}"></td>
+						<td th:text="${alunos.matricula}"></td>
+						<td th:text="${alunos.status}"></td>
+						<td th:text="${alunos.turno}"></td>
+						
+						<td class="btns-list">
+							<a class="list-btn-edit" th:href="@{alterar/{id}(id=${alunos.id})}"><i class="fas fa-edit">
+							</i>Editar</a>
+							
+							<a class="list-btn-delete" th:href="@{excluir/{id}(id=${alunos.id})}"><i class="fas fa-times">
+							</i>Excluir</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</body>
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/academy.js"></script>
+</html>

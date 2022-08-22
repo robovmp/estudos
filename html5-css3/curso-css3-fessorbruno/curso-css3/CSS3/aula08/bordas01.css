@@ -1,0 +1,19 @@
+body{
+    background-color: cornflowerblue;
+}
+
+#d1{
+    width: 500px; /*configura a Largura*/
+    height: 500px;/* configura a Altura*/
+    background-color: #ddd;
+    border-style: solid; /* Nessa comando definimos o tipo de borda */
+    border-width: 20px; /*configura a largura da borda*/
+    border-color: yellow; /* configura a cor da borda*/
+}
+
+/*
+border: #000 solid 20px
+
+meta propriedade border
+
+*/

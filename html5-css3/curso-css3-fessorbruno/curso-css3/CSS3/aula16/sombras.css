@@ -1,0 +1,28 @@
+h1{
+    font: 50pt Arial;
+    color: brown;
+    text-shadow: 5px 5px 5px black, -5px -5px 5px blue, -5px 5px 5px green;
+
+
+    /* distância horizontal, disntância vertical, espaçamento da sombra e cor
+    pode-se adicionar mais de uma sombra em um mesmo objeto, utilizando a vírgula
+    
+    
+    
+    
+    */
+}
+
+div{
+    width: 300px;
+    height: 300px;
+    border: solid 2px;
+    border-radius: 20px;
+    padding: 5px;
+/*
+    Para os demais elementos usamos o box-shadow para aplicar sombras
+*/
+
+    box-shadow: 5px 5px 10px #888 ;
+
+}

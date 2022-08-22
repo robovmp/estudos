@@ -1,0 +1,65 @@
+<script src="https://unpkg.com/vue@2"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matador de Monstros</title>
+</head>
+<body>
+  <section id="desafio">
+    <section class="section1">
+      <div id="jogador">
+        <h1>Jogador</h1>
+        <div class="barraVida">
+          <div class="progresso" v-bind:style="{width: widthJogador + '%'}"></div>
+        </div>
+        <p>{{widthJogador}}%</p>
+      </div>
+      <div id="monstro">
+        <h1>Monstro</h1>
+        <div class="barraVida">
+          <div class="progresso" v-bind:style="{width: widthMonstro + '%'}"></div>
+        </div>
+        <p>{{widthMonstro}}%</p>
+      </div>
+    </section>
+    <section class="section2">
+      <div v-if="newGame">
+        <h3 v-if="boolean.venceu">Você Ganhou :-)</h3>
+        <h3 v-else-if="boolean.empate">Você empatou :-|</h3>
+        <h3 v-else-if="boolean.perdeu">Você mamou :-(</h3>
+        <button style="background-color: #2D386B;"v-on:click="iniciarJogo">Iniciar novo jogo</button>
+      </div>
+      <div v-else>
+        <button v-on:click="ataque" style="background-color: crimson;">
+          Ataque</button>
+        <button v-on:click="ataqueEspecial" style="background-color: #DF972C;">
+          Ataque Especial</button>
+        <button v-on:click="curar" style="background-color: #80FF80;">
+          Curar</button>
+        <button style="background-color: #2D386B;" v-on:click="desistir">
+          Desistir</button>
+      </div>
+    </section>
+    <section class="section3">
+      <ul>
+        <li id="listaJogador" v-for="danoJ in arrayDanoCausado">
+          O jogador atacou o monstro com {{danoJ}}.</li>
+       
+        <li id="listajogador" v-for="curaJ in arrayDanoCurado">
+            O Jogador curou {{curaJ}}.</li>
+      </ul>
+      <ul>
+        <li id="listaMonstro" v-for="danoM in arrayDanoRecebido">
+          O monstro atacou o jogador com {{danoM}}.</li>
+      </ul>
+      </section>
+  </section>
+  
+</body>
+</html>
+
+<script src="app.js"></script>

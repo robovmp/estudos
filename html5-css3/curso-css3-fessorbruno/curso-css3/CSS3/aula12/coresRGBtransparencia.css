@@ -1,0 +1,28 @@
+body{
+    background: rgb(124, 124, 209);
+}
+
+
+p{
+    font: bold 20pt Arial;
+    
+}
+
+div{
+    left: 50px;
+    top: 0px;
+    position: absolute;
+    font: 20pt Arial;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5 );
+    /* rgba
+        r - red
+        g - green
+        b - blue
+        a - alpha  aqui configura-se a transparência de 0 à 1 
+    
+    */
+}

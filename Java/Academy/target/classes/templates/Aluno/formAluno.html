@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <title>Inserir Alunos</title>
+</head>
+<body>
+	<div th:replace="fragment/fragmentos :: cabeca"></div>
+	<section class="section-form">
+		<div class="container">
+			<div class="div-tit">Cadastrar Alunos</div>
+			<form method="post" action="/InsertAlunos" th:object="${aluno}">
+				<div class="form-area">
+					<div class="form-area-1">
+						<div class="form-area--campos">
+							<label class="form-titulo">Nome do Auno:</label>
+							<label class="form-caixas">
+								<input class="caixas" type="text" placeholder="Ex: João Silva" th:field="*{nome}"/>
+							</label>
+						</div>
+						<div class="form-alert">
+							<span th:if="${#fields.hasErrors('nome')}"
+								th:errors="*{nome}"
+							></span>
+						</div>
+					</div>
+					
+					<!-- Curso -->
+					<div class="form-area-2">
+						<div class="form-area--campos">
+							<label class="form-titulo">Selecione o Curso:</label>
+							<label class="form-caixas">
+								<select class="caixas" th:field="*{curso}">
+									<option th:each="curso : ${T(br.com.academy.enums.Curso).values()}"
+									th:value="${curso}" th:text="${curso}"></option>
+								</select>
+							</label>
+						</div>
+						<div class="form-alert">
+							<span th:if="${#fields.hasErrors('curso')}"
+								th:errors="*{curso}"
+							></span>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Matricula -->
+				<div class="form-area">
+					<div class="form-area-1">
+						<div class="form-area--campos">
+							<label class="form-titulo">Gerar Matricula:</label>
+							<label class="form-caixas">
+								<input class="caixas" type="text" th:field="*{matricula}"/>
+								<button id="botao-gerar"type="button" onclick="GerarMatricula();">Gerar</button>
+							</label>
+						</div>
+						<div class="form-alert">
+							<span th:if="${#fields.hasErrors('matricula')}"
+								th:errors="*{matricula}"
+							></span>
+						</div>
+					</div>
+					<!-- Status -->
+					<div class="form-area-2">
+						<div class="form-area--campos">
+							<label class="form-titulo">Selecione o Status:</label>
+							<label class="form-caixas">
+								<select class="caixas" th:field="*{status}">
+									<option th:each="status : ${T(br.com.academy.enums.Status).values()}"
+									th:value="${status}" th:text="${status}"></option>
+								</select>
+							</label>
+						</div>
+						<div class="form-alert">
+							<span th:if="${#fields.hasErrors('status')}"
+								th:errors="*{status}"
+							></span>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Turno -->
+				<div class="form-area">
+					<div class="form-area-1">
+						<div class="form-area--campos">
+							<label class="form-titulo">Turno:</label>
+							<label class="form-caixas">
+								<input class="caixas" type="text" placeholder="Ex: Manhã" th:field="*{turno}"/>
+							</label>
+						</div>
+						<div class="form-alert">
+							<span th:if="${#fields.hasErrors('turno')}"
+								th:errors="*{turno}"
+							></span>
+						</div>
+					</div>
+					<div class="form-area-2">
+						<div class="form-area--campos-btn">
+							<button id="btn-salvar" type="submit" class="btn-form">Salvar</button>
+							<button id="btn-voltar" type="button" class="btn-form"><a th:href="@{/index}">Voltar</a></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+</body>
+
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/academy.js"></script>
+</html>

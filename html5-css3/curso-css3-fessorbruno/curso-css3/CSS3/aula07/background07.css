@@ -1,0 +1,21 @@
+body{
+    background: #aaa url(flores.jpg) no-repeat center 0px / 780px;
+
+    /*Para indicar o tamanho usando a metapropriedade deve se usar "/" para que entenda o comando
+      Para que a imagem ocupe toda tela trabalharemos com % 
+
+
+
+    Chama-se metapropriedade background
+
+    background: #aaa url(flores.jpg) repeat-x 0px 0px;
+
+    Tudo abaixo equivale ao comando acima
+
+    background-color: #aaa;
+    background-image: url(flores.jpg);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+
+    */
+}
